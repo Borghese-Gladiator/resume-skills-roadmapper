@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.my-link:link, .my-link:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.my-link:hover, .my-link:active {
+  background-color: green;
+  color: white;
+}
