@@ -1,9 +1,10 @@
 // Next.js Imports
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from "next/link";
 // Custom Components
 import MyTable from '../components/MyTable';
 // CSS Module Styling
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+        <Link href="/profile">
+          <a className="my-link">Go: Profile</a>
+        </Link>
 
         <MyTable />
       </main>
