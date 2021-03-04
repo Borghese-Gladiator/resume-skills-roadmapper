@@ -1,3 +1,4 @@
+import React from 'react'
 // Next.js Imports
 import Head from 'next/head';
 import Link from "next/link";
@@ -7,24 +8,49 @@ import MyTable from '../components/MyTable';
 // CSS Module Styling
 import styles from '../styles/Home.module.css';
 
-const menu = [
-  {
-    title: 'Item 1',
-    children: [
-      {
-        title: 'Item 1.1',
-        children: [
-          {
-            title: 'Item 1.1.1',
-          },
-        ],
-      },
-      {
-        title: 'Item 1.2',
-      },
-    ],
-  },
-]
+
+import styled from 'styled-components';
+
+import { initialColumns, initialItems, makeData } from '../constants';
+
+
+const Styles = styled.div`
+  padding: 1rem;
+
+  table {
+    border-spacing: 0;
+    border: 1px solid black;
+
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+`
+function StyledTable() {
+  const data = React.useMemo(() => makeData(20), [])
+
+  return (
+    <Styles>
+      <MyTable columns={initialColumns} data={data} />
+    </Styles>
+  )
+}
 
 export default function Home() {
   return (
@@ -48,8 +74,8 @@ export default function Home() {
           <a className="my-link">Go: Profile</a>
         </Link>
 
-        <RecursiveMenu items={menu} />
-        <MyTable />
+        <RecursiveMenu items={initialItems} />
+        <StyledTable />
       </main>
 
       <footer className={styles.footer}>
