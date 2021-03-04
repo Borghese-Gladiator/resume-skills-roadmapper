@@ -7,21 +7,21 @@ function Menu({ items }) {
     <ul>
       {items.map(item => {
         return (
-          <li key={item.title}>
-            {item.title}{' '}
+          <li key={item.name}>
+            {item.name}{' '}
             {item.children && (
               <button
                 onClick={() => {
                   setDisplayChildren({
                     ...displayChildren,
-                    [item.title]: !displayChildren[item.title],
+                    [item.name]: !displayChildren[item.name],
                   });
                 }}
               >
-                {displayChildren[item.title] ? '-' : '+'}
+                {displayChildren[item.name] ? '-' : '+'}
               </button>
             )}
-            {displayChildren[item.title] && item.children && <Menu items={item.children} />}
+            {displayChildren[item.name] && item.children && <Menu items={item.children} />}
           </li>
         );
       })}

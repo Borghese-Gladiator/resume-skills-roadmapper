@@ -1,6 +1,7 @@
-import React from 'react'
-// Next.js Imports
+import React, { useState } from 'react'
+// packages
 import Head from 'next/head';
+import uniqid from 'uniqid';
 // Custom Components
 import DefaultLayout from "../layouts/DefaultLayout";
 import RecursiveMenu from '../components/RecursiveMenu';
@@ -19,6 +20,57 @@ function StyledTable() {
 }
 
 export default function Home() {
+  const [skills, setSkills] = useState([
+    {
+      id: uniqid(),
+      name: "JavaScript",
+      children: [
+        {
+          id: uniqid(),
+          name: "React",
+        },
+        {
+          id: uniqid(),
+          name: "Angular",
+        },
+        {
+          id: uniqid(),
+          name: "Vue.js",
+        },
+        {
+          id: uniqid(),
+          name: "Node.js",
+        },
+      ]
+    },
+    {
+      id: uniqid(),
+      name: "Python",
+      children: [
+        {
+          id: uniqid(),
+          name: "Numpy",
+        },
+        {
+          id: uniqid(),
+          name: "Pandas",
+        },
+        {
+          id: uniqid(),
+          name: "Beautiful Soup4",
+        },
+        {
+          id: uniqid(),
+          name: "TensorFlow",
+        },
+        {
+          id: uniqid(),
+          name: "OpenCV",
+        },
+      ]
+    },
+  ]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,7 +83,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Resume Skills Builder</a>
         </h1>
-        <RecursiveMenu items={initialItems} />
+        <RecursiveMenu items={skills} />
         <StyledTable />
       </main>
 
