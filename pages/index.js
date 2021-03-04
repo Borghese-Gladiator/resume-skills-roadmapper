@@ -2,9 +2,29 @@
 import Head from 'next/head';
 import Link from "next/link";
 // Custom Components
+import RecursiveMenu from '../components/RecursiveMenu';
 import MyTable from '../components/MyTable';
 // CSS Module Styling
 import styles from '../styles/Home.module.css';
+
+const menu = [
+  {
+    title: 'Item 1',
+    children: [
+      {
+        title: 'Item 1.1',
+        children: [
+          {
+            title: 'Item 1.1.1',
+          },
+        ],
+      },
+      {
+        title: 'Item 1.2',
+      },
+    ],
+  },
+]
 
 export default function Home() {
   return (
@@ -28,6 +48,7 @@ export default function Home() {
           <a className="my-link">Go: Profile</a>
         </Link>
 
+        <RecursiveMenu items={menu} />
         <MyTable />
       </main>
 
