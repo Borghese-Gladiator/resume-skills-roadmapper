@@ -5,19 +5,18 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 #root {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 #content {
   text-align: center;
   padding-bottom: 30px;
 }
 
+/* Navbar Styling */
 nav {
   margin: 30px;
   display: flex;
@@ -29,24 +28,11 @@ nav {
   height:80px;
   padding:5px; /* this */
 }
-
-nav > a
-{
+nav > .my-link {
   flex:1 1 auto;
   text-align:center;
-
   margin:10px;  /* and that, will result in a 10px gap */
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .my-link:link, .my-link:visited {
   background-color: white;
   color: black;
@@ -56,21 +42,16 @@ a {
   text-decoration: none;
   display: inline-block;
 }
-
 .my-link:hover, .my-link:active {
   background-color: green;
   color: white;
 }
 
+/* Table Styling */
 table {
   border-spacing: 0;
   border: 1px solid black;
 }
-
-tr:last-child {
-  border-bottom: 0;
-}
-
 th,
 td {
   margin: 0;
@@ -78,7 +59,6 @@ td {
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
-
 th:last-child {
   border-right: 0;
 }
