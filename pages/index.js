@@ -7,48 +7,15 @@ import RecursiveMenu from '../components/RecursiveMenu';
 import MyTable from '../components/MyTable';
 // CSS Module Styling
 import styles from '../styles/Home.module.css';
-
-
 import styled from 'styled-components';
 
 import { initialColumns, initialItems, makeData } from '../constants';
 
-
-const Styles = styled.div`
-  padding: 1rem;
-
-  table {
-    border-spacing: 0;
-    border: 1px solid black;
-
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-
-      :last-child {
-        border-right: 0;
-      }
-    }
-  }
-`
 function StyledTable() {
   const data = React.useMemo(() => makeData(20), [])
 
   return (
-    <Styles>
-      <MyTable columns={initialColumns} data={data} />
-    </Styles>
+    <MyTable columns={initialColumns} data={data} />
   )
 }
 
@@ -62,6 +29,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <h3 className={styles.title}>
+          Welcome to <a href="https://nextjs.org">Resume Skills Builder</a>
+        </h3>
         <RecursiveMenu items={initialItems} />
         <StyledTable />
       </main>
