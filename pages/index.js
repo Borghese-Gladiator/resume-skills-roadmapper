@@ -1,8 +1,8 @@
 import React from 'react'
 // Next.js Imports
 import Head from 'next/head';
-import Link from "next/link";
 // Custom Components
+import DefaultLayout from "../layouts/DefaultLayout";
 import RecursiveMenu from '../components/RecursiveMenu';
 import MyTable from '../components/MyTable';
 // CSS Module Styling
@@ -62,18 +62,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-        <Link href="/profile">
-          <a className="my-link">Go: Profile</a>
-        </Link>
-
         <RecursiveMenu items={initialItems} />
         <StyledTable />
       </main>
@@ -91,3 +79,5 @@ export default function Home() {
     </div>
   )
 }
+
+Home.Layout = DefaultLayout;
