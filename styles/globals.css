@@ -22,28 +22,29 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: #333;
 
-  width:300px;
-  height:80px;
+  width: 100%;
   padding:5px; /* this */
+  margin-bottom: 5px;
 }
 nav > .my-link {
-  flex:1 1 auto;
-  text-align:center;
-  margin:10px;  /* and that, will result in a 10px gap */
-}
-.my-link:link, .my-link:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  padding: 10px 20px;
+  display: block;
+  color: white;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  padding: 14px 16px;
+  margin: 0px 10px;
+}
+.my-link .my-link:hover:not(.active) {
+  background-color: #111;
 }
 .my-link:hover, .my-link:active {
   background-color: green;
   color: white;
+}
+.active {
+  background-color: #4CAF50;
 }
 
 /* Table Styling */
