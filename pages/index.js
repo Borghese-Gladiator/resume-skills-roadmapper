@@ -7,8 +7,7 @@ import RecursiveMenu from '../components/RecursiveMenu';
 import MyTable from '../components/MyTable';
 // CSS Module Styling
 import styles from '../styles/Home.module.css';
-import styled from 'styled-components';
-
+// load data
 import { initialColumns, initialItems, makeData } from '../constants';
 
 function StyledTable() {
@@ -29,9 +28,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h3 className={styles.title}>
+        <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Resume Skills Builder</a>
-        </h3>
+        </h1>
         <RecursiveMenu items={initialItems} />
         <StyledTable />
       </main>
