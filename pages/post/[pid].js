@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import DefaultLayout from "../../layouts/DefaultLayout";
 
-const Post = () => {
+export default function Post() {
   const router = useRouter()
   const { pid } = router.query
 
@@ -9,4 +10,4 @@ const Post = () => {
   return <p>Post: {pid}</p>
 }
 
-export default Post
+Post.Layout = DefaultLayout;
