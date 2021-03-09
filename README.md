@@ -1,4 +1,4 @@
-# resume-skills-table-builder
+# resume-skills-roadmapper
 Instead of a Google Docs table, I wrote up a UI to display a table of skills & link them to experience cards. After building the app, writing in the content was a great refresher and stored all the info for me in the browser cache (and I exported the JSON info as a text file).
 
 ## Features
