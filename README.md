@@ -9,6 +9,12 @@ Instead of a Google Docs table, I wrote up a UI to display a table of skills & l
 ## Next.js Default
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### TO DO
+- page for table of skills
+- page for list of experience cards
+- (create experience cards)
+- (create skills & link them based on the dropdown)
+
 ## Getting Started
 
 First, run the development server:
