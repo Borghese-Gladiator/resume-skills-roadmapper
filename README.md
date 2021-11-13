@@ -1,19 +1,26 @@
-# resume-skills-roadmapper
-Instead of a Google Docs table, I wrote up a UI to display a table of skills & link them to experience cards. After building the app, writing in the content was a great refresher and stored all the info for me in the browser cache (and I exported the JSON info as a text file).
+# Resume Skills Roadmapper
+This UI is meant to help me track technologies and how they relate to existing ones.
 
-## Features
-- Layout Persistence in Next.js: [tutorial](https://dev.to/ozanbolel/layout-persistence-in-next-js-107g)
-- Editable table items in react-table: [tutorial 1](https://codesandbox.io/s/ewm82), [tutorial 2](https://codesandbox.io/s/j72j9767zv), and [official docs](https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/basic)
+## Table of Contents
+- [Technologies](#technologies)
+- [Get Started](#get-started)
+- [General Notes](#general-notes)
+
+## Technologies
+
+## Get Started
+- initialized project in past (moved content to archive)
 - 
 
-## Next.js Default
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## General Notes
+#### References
 
-### TO DO
-- page for table of skills
-- page for list of experience cards
-- (create experience cards)
-- (create skills & link them based on the dropdown)
+#### Archived 
+- Layout Persistence in Next.js: [tutorial](https://dev.to/ozanbolel/layout-persistence-in-next-js-107g)
+- Editable table items in react-table: [tutorial 1](https://codesandbox.io/s/ewm82), [tutorial 2](https://codesandbox.io/s/j72j9767zv), and [official docs](https://codesandbox.io/s/github/tannerlinsley/react-table/tree/master/examples/basic)
+
+# README for create-next-app
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
