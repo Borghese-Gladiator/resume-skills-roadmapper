@@ -1,53 +1,37 @@
-import React from 'react'
-import Head from 'next/head';
-import Link from 'next/link';
-import { Page, Text, Image, Display, Button, Grid } from '@geist-ui/react'
+import { useState } from 'react'
+import Header from '../src/components/Header';
+import Sidebar from '../src/components/Sidebar';
+import SkillPanel from '../src/components/SkillPanel';
+import SkillsTreeContext from '../src/context/SkillsTreeContext';
+import SkillsPathContext from '../src/context/SkillsPathContext';
+import { skillTree } from '../src/utils/constants';
+import { Grid } from '@geist-ui/react'
 
-export default function Home() {
-  const gh = 'https://github.com/geist-org/react'
-  const docs = 'https://react.geist-ui.dev'
-  const redirect = (url) => {
-    window.open(url)
-  }
+export default function Home({ initialTree, initialPath }) {
+  const [skills, setSkills] = useState(initialTree);
+  const [skillsPath, setSkillsPath] = useState(initialPath);
 
   return (
-    <div>
-      <Head>
-        <title>Geist UI with NextJS</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Page dotBackdrop width="800px" padding={0}>
-        <Display
-          title="Geist UI"
-          caption={
-            <>
-              Welcome to{' '}
-              <Text span b>
-                Geist UI
-              </Text>{' '}
-              and start learning more !
-            </>
-          }>
-          <Image src="/geist-banner.png" draggable={false} />
-        </Display>
-        <Grid.Container justify="center" gap={3} mt="100px">
-          <Grid xs={20} sm={7} justify="center">
-            <Button
-              shadow
-              type="secondary-light"
-              width="100%"
-              onClick={() => redirect(gh)}>
-              GitHub Repo
-            </Button>
-          </Grid>
-          <Grid xs={0} sm={3} />
-          <Grid xs={20} sm={7} justify="center">
-            <Button width="100%" onClick={() => redirect(docs)}>
-              Documentation Site
-            </Button>
-          </Grid>
+    <SkillsTreeContext.Provider value={{ skills, setSkills }}>
+      <SkillsPathContext.Provider value={{ skillsPath, setSkillsPath }}>
+        <Grid.Container gap={2}>
+          <Header />
+          <Sidebar />
+          <SkillPanel />
         </Grid.Container>
-      </Page>
-    </div>
+      </SkillsPathContext.Provider>
+    </SkillsTreeContext.Provider>
   )
+}
+
+export async function getStaticProps() {
+  const calcPathFromTree = () => ["Java", "Build Tools"]
+  const skillsPath = calcPathFromTree();
+  // Add uuid for every node
+  return {
+    props: {
+      initialTree: skillTree,
+      initialPath: skillsPath
+    }
+  }
 }
