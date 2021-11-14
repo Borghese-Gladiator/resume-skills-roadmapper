@@ -11,7 +11,7 @@ export const convertTreeFormat = (tree) => {
 }
 
 const recConvertTreeFormat = (node) => {
-  if (node.children.length === 0) {
+  if ((!("children" in node)) || node.children.length === 0) {
     node["type"] = "file"
     return node
   }

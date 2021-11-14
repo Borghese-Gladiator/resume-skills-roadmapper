@@ -10,11 +10,19 @@ export const skillTree = [
         children: [
           {
             name: "Frontend",
-            children: []
+            children: [
+              { name: "Swing", },
+              { name: "AWT", }
+            ]
           },
           {
             name: "Backend",
-            children: []
+            children: [
+              {
+                name: "Spring",
+                children: []
+              }
+            ]
           },
           {
             name: "Build Tools",
@@ -48,7 +56,91 @@ export const skillTree = [
         ]
       },
       {
-        name: "Java",
+        name: "JavaScript",
+        children: [
+          {
+            name: "Frontend",
+            children: []
+          },
+          {
+            name: "Backend",
+            children: []
+          },
+          {
+            name: "Build Tools",
+            children: []
+          },
+          {
+            name: "Testing",
+            children: []
+          }
+        ]
+      },
+      {
+        name: "C",
+        children: [
+          {
+            name: "Frontend",
+            children: []
+          },
+          {
+            name: "Backend",
+            children: []
+          },
+          {
+            name: "Build Tools",
+            children: []
+          },
+          {
+            name: "Testing",
+            children: []
+          }
+        ]
+      },
+      {
+        name: "C++",
+        children: [
+          {
+            name: "Frontend",
+            children: []
+          },
+          {
+            name: "Backend",
+            children: []
+          },
+          {
+            name: "Build Tools",
+            children: []
+          },
+          {
+            name: "Testing",
+            children: []
+          }
+        ]
+      },
+      {
+        name: "C#",
+        children: [
+          {
+            name: "Frontend",
+            children: []
+          },
+          {
+            name: "Backend",
+            children: []
+          },
+          {
+            name: "Build Tools",
+            children: []
+          },
+          {
+            name: "Testing",
+            children: []
+          }
+        ]
+      },
+      {
+        name: "Julia",
         children: [
           {
             name: "Frontend",
