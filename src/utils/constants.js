@@ -3,67 +3,67 @@ Start with list of nodes
 */
 export const skillTree = [
   {
-    title: "Languages",
+    name: "Languages",
     children: [
       {
-        title: "Java",
+        name: "Java",
         children: [
           {
-            title: "Frontend",
+            name: "Frontend",
             children: []
           },
           {
-            title: "Backend",
+            name: "Backend",
             children: []
           },
           {
-            title: "Build Tools",
+            name: "Build Tools",
             children: []
           },
           {
-            title: "Testing",
+            name: "Testing",
             children: []
           }
         ]
       },
       {
-        title: "Python",
+        name: "Python",
         children: [
           {
-            title: "Frontend",
+            name: "Frontend",
             children: []
           },
           {
-            title: "Backend",
+            name: "Backend",
             children: []
           },
           {
-            title: "Build Tools",
+            name: "Build Tools",
             children: []
           },
           {
-            title: "Testing",
+            name: "Testing",
             children: []
           }
         ]
       },
       {
-        title: "Java",
+        name: "Java",
         children: [
           {
-            title: "Frontend",
+            name: "Frontend",
             children: []
           },
           {
-            title: "Backend",
+            name: "Backend",
             children: []
           },
           {
-            title: "Build Tools",
+            name: "Build Tools",
             children: []
           },
           {
-            title: "Testing",
+            name: "Testing",
             children: []
           }
         ]
@@ -71,15 +71,15 @@ export const skillTree = [
     ]
   },
   {
-    title: "DevOps",
+    name: "DevOps",
     children: []
   },
   {
-    title: "Data Science",
+    name: "Data Science",
     children: []
   },
   {
-    title: "Blockchain",
+    name: "Blockchain",
     children: []
   }
 ]
