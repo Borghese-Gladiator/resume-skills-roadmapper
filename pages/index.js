@@ -30,15 +30,13 @@ export default function Home({ initialTree, initialPath }) {
 }
 
 export async function getStaticProps() {
-  const calcPathFromTree = () => ["Java", "Build Tools"]
-  const skillsPath = calcPathFromTree();
   const convertedFormat = convertTreeFormat(skillTree);
   
   // Add uuid for every node
   return {
     props: {
       initialTree: convertedFormat,
-      initialPath: skillsPath
+      initialPath: ["/"]
     }
   }
 }
