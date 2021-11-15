@@ -7,11 +7,9 @@ import { Tree } from '@geist-ui/react';
 
 export default function Sidebar() {
   const { skills, setSkills } = useContext(SkillsTreeContext);
-  const { skillsPath, setSkillsPath } = useContext(SkillsPathContext);
+  const { skillsPathArr, setSkillsPathArr } = useContext(SkillsPathContext);
   const handleNodeClick = (path) => {
-    console.log(path);
-    const pathArr = path.split("/")
-    setSkillsPath(pathArr)
+    setSkillsPathArr(path.split("/"));
   }
   
   return (

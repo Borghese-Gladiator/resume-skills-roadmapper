@@ -5,11 +5,11 @@ import { Grid, Card } from '@geist-ui/react';
 const nonBreakingSpaceChar = '\u00A0'
 
 export default function SkillPanel() {
-  const { skillsPath, setSkillsPath } = useContext(SkillsPathContext);
+  const { skillsPathArr, setSkillsPathArr } = useContext(SkillsPathContext);
   return (
     <Grid xs={24} md={12}>
       {
-        skillsPath.map((val, idx) => <span key={`skills_path_${idx}`}>{ (idx ? `${nonBreakingSpaceChar}> `: '') + val}</span>)
+        skillsPathArr.map((val, idx) => <span key={`skills_path_${idx}`}>{(idx ? `${nonBreakingSpaceChar}> ` : '') + val}</span>)
       }
     </Grid>
   )

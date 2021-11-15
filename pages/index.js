@@ -14,12 +14,12 @@ import { Grid } from '@geist-ui/react'
 
 export default function Home({ initialTree, initialPath }) {
   const [skills, setSkills] = useState(initialTree);
-  const [skillsPath, setSkillsPath] = useState(initialPath);
+  const [skillsPathArr, setSkillsPathArr] = useState(initialPath);
 
   return (
     <SkillsTreeContext.Provider value={{ skills, setSkills }}>
-      <SkillsPathContext.Provider value={{ skillsPath, setSkillsPath }}>
-        <Grid.Container gap={2}>
+      <SkillsPathContext.Provider value={{ skillsPathArr, setSkillsPathArr }}>
+        <Grid.Container gap={2} justify="center">
           <Header />
           <Sidebar />
           <SkillPanel />
@@ -31,7 +31,7 @@ export default function Home({ initialTree, initialPath }) {
 
 export async function getStaticProps() {
   const convertedFormat = convertTreeFormat(skillTree);
-  
+
   // Add uuid for every node
   return {
     props: {
