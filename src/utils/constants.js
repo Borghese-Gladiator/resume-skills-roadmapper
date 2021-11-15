@@ -9,6 +9,7 @@ export const skillTree = [
       {
         name: "Java",
         children: [
+          { name: "Java" },
           {
             name: "Frontend",
             children: [
@@ -35,13 +36,18 @@ export const skillTree = [
           },
           {
             name: "Testing",
-            children: []
+            children: [
+              { name: "JUnit" },
+              { name: "TestNG" },
+              { name: "Mockito" },
+            ]
           }
         ]
       },
       {
         name: "Python",
         children: [
+          { name: "Python" },
           {
             name: "Frontend",
             children: []
@@ -63,6 +69,7 @@ export const skillTree = [
       {
         name: "JavaScript",
         children: [
+          { name: "JavaScript" },
           {
             name: "Frontend",
             children: []
@@ -84,6 +91,7 @@ export const skillTree = [
       {
         name: "C",
         children: [
+          { name: "C" },
           {
             name: "Frontend",
             children: []
@@ -105,6 +113,7 @@ export const skillTree = [
       {
         name: "C++",
         children: [
+          { name: "C++" },
           {
             name: "Frontend",
             children: []
@@ -126,6 +135,7 @@ export const skillTree = [
       {
         name: "C#",
         children: [
+          { name: "C#" },
           {
             name: "Frontend",
             children: []
@@ -147,6 +157,7 @@ export const skillTree = [
       {
         name: "Julia",
         children: [
+          { name: "Julia" },
           {
             name: "Frontend",
             children: []
