@@ -1,6 +1,7 @@
 /*
 Start with list of nodes
 */
+
 export const skillTree = [
   {
     name: "Languages",
@@ -26,7 +27,11 @@ export const skillTree = [
           },
           {
             name: "Build Tools",
-            children: []
+            children: [
+              { name: "Maven" },
+              { name: "Gradle" },
+              { name: "Ant" }
+            ]
           },
           {
             name: "Testing",
@@ -159,7 +164,12 @@ export const skillTree = [
             children: []
           }
         ]
-      }
+      },
+      { name: "Bash" },
+      { name: "awk" },
+      { name: "Lua" },
+      { name: "Windows Batch" },
+      { name: "Powershell" }
     ]
   },
   {
