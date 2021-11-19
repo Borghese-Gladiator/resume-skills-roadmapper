@@ -70,9 +70,16 @@ export const skillTree = [
         name: "JavaScript",
         children: [
           { name: "JavaScript" },
+          { name: "Node.js" },
+          { name: "ES6" },
+          { name: "TypeScript" },
           {
             name: "Frontend",
-            children: []
+            children: [
+              { name: "React" },
+              { name: "Angular" },
+              { name: "Vue.js" },
+            ]
           },
           {
             name: "Backend",
@@ -80,7 +87,11 @@ export const skillTree = [
           },
           {
             name: "Build Tools",
-            children: []
+            children: [
+              { name: "npm" }
+              { name: "Babel" },
+              { name: "Webpack" },
+            ]
           },
           {
             name: "Testing",
@@ -180,7 +191,72 @@ export const skillTree = [
       { name: "awk" },
       { name: "Lua" },
       { name: "Windows Batch" },
-      { name: "Powershell" }
+      { name: "Powershell" },
+      {
+        name: "Query Languages",
+        children: [
+          { name: "SQL" },
+          { name: "CQL" },
+          { name: "Knex.js" },
+        ]
+      },
+      
+    ]
+  },
+  {
+    name: "OS & Virtualization",
+    children: [
+      {
+        name: "Windows",
+        children: [
+          { name: "Cygwin" },
+          { name: "Microsoft WSL" },
+          { name: "VirtualBox" },
+        ]
+      },
+      { 
+        name: "Linux Distros",
+        children: [
+          { name: "Ubuntu" },
+          { name: "CentOS 6" },
+          { name: "CentOS 7" },
+          { name: "CentOS 8" },
+          { name: "Kali Linux" },
+        ]
+      },
+      {
+        name: "Android"
+      },
+      {
+        name: "iOS",
+        children: [
+          { name: "Swift" }
+        ]
+      },
+      {
+        name: "Docker"
+      },
+      {
+        name: "Kubernetes",
+        children: [
+          { name: "Terraform" }
+        ]
+      },
+    ]
+  },
+  {
+    name: "Web Dev",
+    children: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "PWA" },
+    ]
+  },
+  {
+    name: "Mobile Dev",
+    children: [
+      { name: "Flutter" },
+      { name: "React Native" },
     ]
   },
   {
@@ -193,6 +269,16 @@ export const skillTree = [
   },
   {
     name: "Blockchain",
+    children: []
+  },
+  {
+    name: "Cybersecurity",
+    children: [
+      { name: "CompTIA Network"}
+    ]
+  },
+  {
+    name: "Collaboration",
     children: []
   }
 ]
