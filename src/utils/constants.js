@@ -88,7 +88,7 @@ export const skillTree = [
           {
             name: "Build Tools",
             children: [
-              { name: "npm" }
+              { name: "npm" },
               { name: "Babel" },
               { name: "Webpack" },
             ]
