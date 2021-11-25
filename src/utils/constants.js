@@ -1,284 +1,297 @@
 /*
-Start with list of nodes
-*/
+NAME
+---------------------------------
+Constant to hold all skills data
 
+DESCRIPTION
+---------------------------------
+This constant gets converted using convertTreeFormat from utils.js into the format needed for the Geist UI FileTree component
+
+Before convertTreeFormat
+export const skillTree = {
+  "Languages": {
+    "Java": {},
+    "Python": {}
+  },
+  "OS & Virtualization": {
+    "Windows": {}
+  }
+}
+
+AFTER convertTreeFormat
 export const skillTree = [
   {
-    name: "Languages",
-    children: [
+    type: 'directory',
+    name: 'Languages',
+    extra: '2 files'
+    files: [
       {
-        name: "Java",
-        children: [
-          { name: "Java" },
-          {
-            name: "Frontend",
-            children: [
-              { name: "Swing", },
-              { name: "AWT", }
-            ]
-          },
-          {
-            name: "Backend",
-            children: [
-              {
-                name: "Spring",
-                children: []
-              }
-            ]
-          },
-          {
-            name: "Build Tools",
-            children: [
-              { name: "Maven" },
-              { name: "Gradle" },
-              { name: "Ant" }
-            ]
-          },
-          {
-            name: "Testing",
-            children: [
-              { name: "JUnit" },
-              { name: "TestNG" },
-              { name: "Mockito" },
-            ]
-          }
-        ]
+        type: 'file',
+        name: 'Java',
       },
       {
-        name: "Python",
-        children: [
-          { name: "Python" },
-          {
-            name: "Frontend",
-            children: []
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: []
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      {
-        name: "JavaScript",
-        children: [
-          { name: "JavaScript" },
-          { name: "Node.js" },
-          { name: "ES6" },
-          { name: "TypeScript" },
-          {
-            name: "Frontend",
-            children: [
-              { name: "React" },
-              { name: "Angular" },
-              { name: "Vue.js" },
-            ]
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: [
-              { name: "npm" },
-              { name: "Babel" },
-              { name: "Webpack" },
-            ]
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      {
-        name: "C",
-        children: [
-          { name: "C" },
-          {
-            name: "Frontend",
-            children: []
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: []
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      {
-        name: "C++",
-        children: [
-          { name: "C++" },
-          {
-            name: "Frontend",
-            children: []
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: []
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      {
-        name: "C#",
-        children: [
-          { name: "C#" },
-          {
-            name: "Frontend",
-            children: []
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: []
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      {
-        name: "Julia",
-        children: [
-          { name: "Julia" },
-          {
-            name: "Frontend",
-            children: []
-          },
-          {
-            name: "Backend",
-            children: []
-          },
-          {
-            name: "Build Tools",
-            children: []
-          },
-          {
-            name: "Testing",
-            children: []
-          }
-        ]
-      },
-      { name: "Bash" },
-      { name: "awk" },
-      { name: "Lua" },
-      { name: "Windows Batch" },
-      { name: "Powershell" },
-      {
-        name: "Query Languages",
-        children: [
-          { name: "SQL" },
-          { name: "CQL" },
-          { name: "Knex.js" },
-        ]
-      },
-      
+        type: 'file',
+        name: 'Python',
+      }
     ]
   },
   {
-    name: "OS & Virtualization",
-    children: [
+    type: 'directory',
+    name: 'OS & Virtualization',
+    extra: '1 file'
+    files: [
       {
-        name: "Windows",
-        children: [
-          { name: "Cygwin" },
-          { name: "Microsoft WSL" },
-          { name: "VirtualBox" },
-        ]
-      },
-      { 
-        name: "Linux Distros",
-        children: [
-          { name: "Ubuntu" },
-          { name: "CentOS 6" },
-          { name: "CentOS 7" },
-          { name: "CentOS 8" },
-          { name: "Kali Linux" },
-        ]
-      },
-      {
-        name: "Android"
-      },
-      {
-        name: "iOS",
-        children: [
-          { name: "Swift" }
-        ]
-      },
-      {
-        name: "Docker"
-      },
-      {
-        name: "Kubernetes",
-        children: [
-          { name: "Terraform" }
-        ]
-      },
+        type: 'file',
+        name: 'Windows',
+      }
     ]
   },
-  {
-    name: "Web Dev",
-    children: [
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "PWA" },
-    ]
-  },
-  {
-    name: "Mobile Dev",
-    children: [
-      { name: "Flutter" },
-      { name: "React Native" },
-    ]
-  },
-  {
-    name: "DevOps",
-    children: []
-  },
-  {
-    name: "Data Science",
-    children: []
-  },
-  {
-    name: "Blockchain",
-    children: []
-  },
-  {
-    name: "Cybersecurity",
-    children: [
-      { name: "CompTIA Network"}
-    ]
-  },
-  {
-    name: "Collaboration",
-    children: []
-  }
 ]
+*/
+export const skillTree = {
+  "Languages": {
+    "Java": {
+      "Java": {},
+      "Frontend": {
+        "Swing": {},
+        "AWT": {},
+      },
+      "Backend": {
+        "Spring": {
+          "Eureka": {},
+        },
+        "Hibernate": {}
+      },
+      "Build Tools": {
+        "Maven": { },
+        "Gradle": {},
+        "Ant": {}
+      },
+      "Testing": {
+        "JUnit": {},
+        "TestNG": {},
+        "Mockito": {}
+      }
+    },
+    "Python": {
+      "Python": {},
+      "Frontend": {
+        "Streamlit": {},
+        "Tkinter": {}
+      },
+      "Backend": {
+        "Web Servers": {
+          "Flask": {},
+          "Django": {},
+          "Streamlit": {},  
+          "gunicorn": {},
+        },
+        "Logging": {
+          "logger": {}
+        },
+        "Office Automation": {
+          "pyautogui": {},
+          "openpyxl": {},
+          "smtplib": {},
+        },
+        "pygame": {},
+        "python-dotenv": {},
+        "sklearn": {},
+        "tensorflow": {},
+        "numpy": {},
+        "pandas": {},
+        "scipy": {},
+        "nltk": {}
+      },
+      "Build Tools": {
+        "pip": {},
+        "virtualenv": {},
+        "pip-tools": {
+          "pip-compile": {},
+          "pip-sync": {}
+        },
+        "pipenv": {},
+        "Anaconda": {}
+      },
+      "Testing": {
+        "unittest": {},
+        "Nose": {},
+        "TestNG": {}
+      },
+      "Beautiful Soup": {},
+      "shelve": {},
+      "shutil": {}
+    },
+    "JavaScript": {
+      "JavaScript": {},
+      "Node.js": {},
+      "ES6": {},
+      "TypeScript": {},
+      "Frontend": {
+        "React": {
+          "Error Boundaries": {},
+          "React Context": {},
+          "Redux": {},
+          "Next.js": {},
+          "Routing Libraries": {
+            "React Router": {},
+            "wouter": {}
+          },
+        },
+        "Angular": {},
+        "Vue.js": {},
+        "Phaser5": {},
+        "Testing": {
+          "Storybook": {},
+          "React Testing Library": {},
+          "Jest": {},
+          "Cypress": {},
+          "Mocha": {}
+        },
+        "Templating": {
+          "Handlebars": {},
+          "Jade": {}
+        }
+      },
+      "Backend": {
+        "Express": {},
+        "Nest.js": {}
+      },
+      "Build Tools": {
+        "npm": {},
+        "yarn": {},
+        "Bundlers": {
+          "Webpack": {},
+          "Vite": {},
+          "Snowpack": {},
+          "Parcel": {},
+          "Rollup": {},
+        },
+        "Transpilers": {
+          "Babel": {},
+          "ESBuild": {}
+        }
+      },
+      "Testing": {
+        "Mocking": {
+          "Sinon": {},
+          "Jest": {},
+          "Jasmine": {},
+          "Enzyme": {}
+        },
+        "Mocha": {},
+        "Jest": {},
+        "Karma": {},
+        "Jasmine": {},
+        "Cucumber": {},
+        "Cypress": {},
+        "Browser Controllers": {
+          "Chrome Webdriver": {},
+          "Nightwatch": {},
+          "Phantom": {},
+          "Puppeteer": {},
+          "TestCafe": {},
+          "Cypress": {},
+        }
+      }
+    },
+    "C": {
+      "C": {},
+      "Backend": {},
+      "Build Tools": {},
+      "Testing": {}
+    },
+    "C++": {
+      "C++": {},
+      "Backend": {},
+      "Build Tools": {},
+      "Testing": {}
+    },
+    "C#": {
+      "C#": {},
+      "Backend": {},
+      "Build Tools": {},
+      "Testing": {}
+    },
+    "Julia": {
+      "Julia": {},
+      "Backend": {},
+      "Build Tools": {},
+      "Testing": {}
+    },
+    "Bash": {},
+    "Windows Batch": {},
+    "Powershell": {},
+    "Query Languages": {
+      "SQL": {},
+      "CQL": {},
+      "Knex.js": {}
+    },
+    "awk": {},
+    "Lua": {},
+    "Perl": {}
+  },
+  "OS & Virtualization": {
+    "Windows": {
+      "Cygwin": {},
+      "Microsoft WSL": {},
+      "VirtualBox": {}
+    },
+    "Linux Distros": {
+      "Ubuntu": {},
+      "CentOS 6": {},
+      "CentOS 7": {},
+      "CentOS 8": {},
+      "Kali Linux": {},
+    },
+    "Android": {
+      "Kotlin": {}
+    },
+    "iOS": {
+      "Swift": {}
+    },
+    "Docker": {},
+    "Kubernetes": {},
+    "Terraform": {}
+  },
+  "Web Dev": {
+    "HTML5": {},
+    "CSS3": {},
+    "PWA": {},
+    "Cross Platform": {
+      "Flutter": {},
+      "React Native": {},
+      "Apache Cordoba": {},
+      "Ionic": {}
+    },
+    "CSS Mix-ins": {},
+    "React Styling": {
+      "styled-components": {},
+    },
+    "React Component Libraries": {
+      "Material UI": {},
+      "Chakra UI": {},
+      "Semantic UI": {},
+      "React Bootstrap": {},
+      "Reactstrap": {},
+      "Geist UI": {}
+    },
+  },
+  "Microservices":{
+    "RabbitMQ": {},
+    "Spark": {}
+  },
+  "DevOps": {},
+  "Data Science": {},
+  "Blockchain": {},
+  "Cybersecurity": {
+    "CompTIA Network": {}
+  },
+  "Collaboration": {
+    "VCS": {
+      "git": {},
+    },
+    "Jira": {},
+    "Slack": {}
+  }
+}
