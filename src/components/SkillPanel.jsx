@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import SkillsObjectContext from "../context/SkillsObjectContext";
-import { Grid, Text, Collapse, Tag } from '@geist-ui/react';
+import { Grid, Text, Tag } from '@geist-ui/react';
 
 const nonBreakingSpaceChar = '\u00A0'
 
@@ -19,11 +19,8 @@ export default function SkillPanel() {
           )
         }
       </div>
-      <Collapse.Group>
-        <Collapse title={name} initialVisible>
-          <Text>{description}</Text>
-        </Collapse>
-      </Collapse.Group>
+      <Text h3>{name}</Text>
+      <Text p>{description}</Text>
     </Grid>
   )
 }
