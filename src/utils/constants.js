@@ -7,7 +7,7 @@ DESCRIPTION
 ---------------------------------
 This constant gets converted using convertTreeFormat from utils.js into the format needed for the Geist UI FileTree component
 
-Before convertTreeFormat
+BEFORE convertTreeFormat
 export const skillTree = {
   "Languages": {
     "Java": {},
@@ -57,9 +57,7 @@ export const skillTree = {
         "AWT": {},
       },
       "Backend": {
-        "Spring": {
-          "Eureka": {},
-        },
+        "Spring": {},
         "Hibernate": {}
       },
       "Build Tools": {
@@ -196,28 +194,39 @@ export const skillTree = {
       }
     },
     "C": {
-      "C": {},
+      "C": {
+        "Pointers": {},
+        "Structures": {},
+        "C File I/O": {},
+        "malloc vs calloc": {}
+      },
       "Backend": {},
-      "Build Tools": {},
-      "Testing": {}
+      "Build Tools": {
+        "make": {}
+      },
+      "Testing": {
+        "Check": {}
+      }
     },
     "C++": {
       "C++": {},
-      "Backend": {},
-      "Build Tools": {},
-      "Testing": {}
     },
     "C#": {
-      "C#": {},
-      "Backend": {},
-      "Build Tools": {},
-      "Testing": {}
+      "C#": {
+        ".NET": {},
+        "Common Language Runtime (JRE)": {},
+        "Visual Studio": {},
+        "Windows Desktop Applications": {}
+      },
     },
     "Julia": {
       "Julia": {},
-      "Backend": {},
-      "Build Tools": {},
-      "Testing": {}
+      "Build Tools": {
+        "Project.toml": {},
+        "Pkg": {},
+        "Julia Packages": {},
+        "JuliaHub": {}
+      },
     },
     "Bash": {},
     "Windows Batch": {},
@@ -232,33 +241,70 @@ export const skillTree = {
     "Perl": {}
   },
   "OS & Virtualization": {
-    "Windows": {
-      "Cygwin": {},
-      "Microsoft WSL": {},
-      "VirtualBox": {}
+    "Desktop": {
+      "Windows": {
+        "Virtualization": {
+          "Hyper-V": {},
+          "Microsoft WSL": {},
+          "VirtualBox": {}
+        },
+        "Remote Desktop": {},
+        "Cygwin": {},
+      },
+      "Linux Distros": {
+        "Ubuntu": {},
+        "CentOS 6": {},
+        "CentOS 7": {},
+        "CentOS 8": {},
+        "Kali Linux": {},
+      },
     },
-    "Linux Distros": {
-      "Ubuntu": {},
-      "CentOS 6": {},
-      "CentOS 7": {},
-      "CentOS 8": {},
-      "Kali Linux": {},
+    "Mobile": {
+      "Android": {
+        "Android Studio": {},
+        "AVD Manager": {},
+        "XML": {},
+        "Java": {},
+        "Kotlin": {},
+        "Permissions": {
+          "Install-time permissions": {},
+          "Normal permissions": {},
+          "Runtime permissions": {},
+          "Signature permissions": {},
+        }
+      },
+      "iOS": {
+        "Swift": {}
+      },
     },
-    "Android": {
-      "Kotlin": {}
+    "Containerization": {
+      "Docker": {
+        "Docker Desktop": {},
+        "Docker Compose": {},
+        "Docker images vs containers": {},
+        "Docker Hub": {},
+        "Dockerfile": {
+          "Bridge Networks": {},
+          ".dockerignore": {},
+        },
+      },
     },
-    "iOS": {
-      "Swift": {}
+    "Kubernetes": {
+      "Kubernetes API": {},
+      "Kubernetes Cluster": {
+        "node": {},
+      },
+      "Minikube": {},
+      "kubectl": {}
     },
-    "Docker": {},
-    "Kubernetes": {},
     "Terraform": {}
   },
   "Web Dev": {
     "HTML5": {},
     "CSS3": {},
-    "PWA": {},
+    "Lighthouse": {},
     "Cross Platform": {
+      "PWA": {},
       "Flutter": {},
       "React Native": {},
       "Apache Cordoba": {},
@@ -277,21 +323,53 @@ export const skillTree = {
       "Geist UI": {}
     },
   },
-  "Microservices":{
-    "RabbitMQ": {},
-    "Spark": {}
-  },
-  "DevOps": {},
-  "Data Science": {},
-  "Blockchain": {},
-  "Cybersecurity": {
-    "CompTIA Network": {}
-  },
-  "Collaboration": {
-    "VCS": {
-      "git": {},
+  "Database": {
+    "Big Data": {
+      "Apache Spark": {},
+      "Hadoop": {}
     },
-    "Jira": {},
-    "Slack": {}
+    "Cloud": {
+      "MongoDB Atlas": {},
+      "Google Cloud Platform": {},
+      "Amazon Web Services": {},
+      "Microsoft Azure": {},
+    },
+    "PostgreSQL": {},
+    "MySQL": {},
+    "SQL Server": {},
+    "MongoDB": {},
+    "Redis": {},
+    "Message Broker":{
+      "RabbitMQ": {},
+      "Kafka": {}
+    },
+  },
+  "Other": {
+    "Blockchain": {},
+    "Collaboration": {
+      "VCS": {
+        "git": {},
+      },
+      "Jira": {},
+      "Slack": {}
+    },
+    "Cybersecurity": {
+      "CompTIA Network": {}
+    },
+    "DevOps": {
+      "Jenkins": {
+        "Scripted Pipeline": {}
+      },
+      "GitLab": {}
+    },
+    "Data Science": {},
+    "3D Modeling": {
+      "Unity": {},
+      "Blender": {},
+      "Tkinter": {},
+      "CAD": {
+        "AutoDesk Maya": {}
+      }
+    },
   }
 }

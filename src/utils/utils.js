@@ -8,13 +8,13 @@ export const convertTreeFormat = (tree) => {
   for (const rootKey of rootKeysList) {
     result.push(recConvertTreeFormat(rootKey, tree[rootKey]))
   }
-  console.log(`${result}`)
+  console.log(`${JSON.stringify(result)}`)
   return result;
 }
 
 const recConvertTreeFormat = (name, node) => {
-  const keys = Object.keys(node);
-  const n = keys.length;
+  const keys = Object.keys(node)
+  const n = keys.length
   node["name"] = name
   if (n === 0) {
     node["type"] = "file"
@@ -24,7 +24,7 @@ const recConvertTreeFormat = (name, node) => {
   node["extra"] = n === 1 ? `1 file` : `${n} files`
   node["files"] = keys.map((childKey, idx) => {
     return recConvertTreeFormat(childKey, node[childKey])
-  })
+  });
   return node
 }
 /*
