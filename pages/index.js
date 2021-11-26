@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from "next/head";
 // CUSTOM
 import Header from '../src/components/Header';
 import Sidebar from '../src/components/Sidebar';
@@ -21,20 +22,26 @@ export default function Home({ initialTree }) {
 
   return (
     <SkillsObjectContext.Provider value={{ skillsObj, setSkillsObj }}>
-      <Grid.Container gap={2} justify="center">
-        <Header />
-        <Sidebar skillTree={skills} setSkillTree={setSkills} />
-        <SkillPanel />
-      </Grid.Container>
+      <Head>
+        <title>Resume Skill Tree</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Resume Skill Tree shows essential skills in a web UI instead of tossing it all in a Google Docs." />
+      </Head>
+      <main style={{ minHeight: "100vh", background: "#EEEEEE", overflowY: "hidden" }}>
+        <Grid.Container gap={2}>
+          <Header />
+          <Sidebar skillTree={skills} setSkillTree={setSkills} />
+          <SkillPanel />
+        </Grid.Container>
+      </main>
     </SkillsObjectContext.Provider>
   )
 }
 
 export async function getStaticProps() {
-  const mySkillTree = {...skillTree};
+  const mySkillTree = { ...skillTree };
   const convertedFormat = convertTreeFormat(mySkillTree);
 
-  // Add uuid for every node
   return {
     props: {
       initialTree: convertedFormat,
