@@ -1,5 +1,5 @@
 # Resume Skills Roadmapper
-This UI is meant to help me track technologies and how they relate to existing ones.
+This UI is meant to help me track technologies I've worked with, so I do not forget my experiences.
 
 ## Table of Contents
 - [Technologies](#technologies)
@@ -7,12 +7,16 @@ This UI is meant to help me track technologies and how they relate to existing o
 - [General Notes](#general-notes)
 
 ## Technologies
+- Next.js - React framework
+- Geist UI - UI Compont library (was easy to use but not a lot of functionality)
 
 ## Get Started
-- initialized project in past (moved content to archive)
-- 
+- ```npm i && npm run dev```
 
 ## General Notes
+- initialized project in past (moved content to archive)
+- Original plan was to write a roadmapper about how to get certain resume skills or I could fill in my experiences. This did not go smoothly and I just created a resume skills tree instead.
+
 #### References
 
 #### Archived 
