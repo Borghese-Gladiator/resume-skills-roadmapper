@@ -11,7 +11,7 @@ import { convertTreeFormat } from '../src/utils/utils';
 // GEIST UI
 import { Grid } from '@geist-ui/react'
 
-export default function Home({ initialTree, initialPath }) {
+export default function Home({ initialTree }) {
   const [skills, setSkills] = useState(initialTree);
   const [skillsObj, setSkillsObj] = useState({
     pathArr: ["/"],
@@ -31,7 +31,8 @@ export default function Home({ initialTree, initialPath }) {
 }
 
 export async function getStaticProps() {
-  const convertedFormat = convertTreeFormat(skillTree);
+  const mySkillTree = {...skillTree};
+  const convertedFormat = convertTreeFormat(mySkillTree);
 
   // Add uuid for every node
   return {
