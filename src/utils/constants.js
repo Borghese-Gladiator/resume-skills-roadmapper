@@ -57,6 +57,10 @@ export const skillTree = {
         "AWT": {},
       },
       "Backend": {
+        "Tomcat": {},
+        "Jersey": {},
+        "MongoDB Java Driver": {},
+        "Microsoft JDBC Driver": {},
         "Spring": {},
         "Hibernate": {}
       },
@@ -311,6 +315,9 @@ export const skillTree = {
       "Ionic": {}
     },
     "CSS Mix-ins": {},
+    "JavaScript Libraries": {
+      "jQuery": {}
+    },
     "React Styling": {
       "styled-components": {},
     },
