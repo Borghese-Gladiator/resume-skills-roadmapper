@@ -81,6 +81,16 @@ export const skillTree = {
         "Streamlit": {},
         "Tkinter": {}
       },
+      "Machine Learning": {
+        "sklearn": {},
+        "tensorflow": {},
+        "numpy": {},
+        "pandas": {},
+        "scipy": {},
+        "nltk": {},
+        "Keras": {},
+        "openCV": {}
+      },
       "Backend": {
         "Web Servers": {
           "Flask": {},
@@ -88,9 +98,7 @@ export const skillTree = {
           "Streamlit": {},  
           "gunicorn": {},
         },
-        "Logging": {
-          "logger": {}
-        },
+        "logging": {},
         "Office Automation": {
           "pyautogui": {},
           "openpyxl": {},
@@ -98,12 +106,6 @@ export const skillTree = {
         },
         "pygame": {},
         "python-dotenv": {},
-        "sklearn": {},
-        "tensorflow": {},
-        "numpy": {},
-        "pandas": {},
-        "scipy": {},
-        "nltk": {}
       },
       "Build Tools": {
         "pip": {},
@@ -120,14 +122,19 @@ export const skillTree = {
         "Nose": {},
         "TestNG": {}
       },
-      "Beautiful Soup": {},
-      "shelve": {},
-      "shutil": {}
+      "Utils": {
+        "Beautiful Soup": {},
+        "requests": {},
+        "pickle / unpickle": {},
+        "shelve": {},
+        "shutil": {}
+      }
     },
     "JavaScript": {
       "JavaScript": {},
       "Node.js": {},
       "ES6": {},
+      "NVM - Node Version Manager": {},
       "TypeScript": {},
       "Frontend": {
         "React": {
@@ -216,12 +223,12 @@ export const skillTree = {
       "C++": {},
     },
     "C#": {
-      "C#": {
-        ".NET": {},
-        "Common Language Runtime (JRE)": {},
-        "Visual Studio": {},
-        "Windows Desktop Applications": {}
-      },
+      "C#": {},
+      ".NET": {},
+      "Common Language Runtime (JRE)": {},
+      "Visual Studio": {},
+      "Windows Desktop Applications": {},
+      "Unity": {}
     },
     "Julia": {
       "Julia": {},
@@ -231,6 +238,10 @@ export const skillTree = {
         "Julia Packages": {},
         "JuliaHub": {}
       },
+    },
+    "Ruby": {
+      "Ruby on Rails": {},
+      "gem files": {}
     },
     "Bash": {},
     "Windows Batch": {},
@@ -303,7 +314,7 @@ export const skillTree = {
     },
     "Terraform": {}
   },
-  "Web Dev": {
+  "Web Frontend": {
     "HTML5": {},
     "CSS3": {},
     "Lighthouse": {},
@@ -333,7 +344,8 @@ export const skillTree = {
   "Database": {
     "Big Data": {
       "Apache Spark": {},
-      "Hadoop": {}
+      "Hadoop": {},
+      "CockroachDB": {}
     },
     "Cloud": {
       "MongoDB Atlas": {},
@@ -341,35 +353,52 @@ export const skillTree = {
       "Amazon Web Services": {},
       "Microsoft Azure": {},
     },
-    "PostgreSQL": {},
-    "MySQL": {},
-    "SQL Server": {},
-    "MongoDB": {},
-    "Redis": {},
+    "NoSQL": {
+      "MongoDB": {},
+      "Redis": {},
+      "Cassandra": {}
+    },
+    "SQL": {
+      "PostgreSQL": {},
+      "MySQL": {},
+      "SQL Server": {},
+      "SQLite": {}
+    },
     "Message Broker":{
       "RabbitMQ": {},
-      "Kafka": {}
+      "Apache Kafka": {}
     },
+    "Graph Databases": {
+      "InfoGrid": {},
+      "Infinite Graph": {},
+      "OrientDB": {},
+      "FlockDB": {}
+    }
+  },
+  "IoT": {},
+  "Data Science": {},
+  "Blockchain": {},
+  "Collaboration": {
+    "VCS": {
+      "git": {},
+      "Accurev": {}
+    },
+    "GitHub": {},
+    "BitBucket": {},
+    "Jira": {},
+    "Slack": {},
+    "Office 365": {}
+  },
+  "DevOps": {
+    "Jenkins": {
+      "Scripted Pipeline": {}
+    },
+    "GitLab": {}
   },
   "Other": {
-    "Blockchain": {},
-    "Collaboration": {
-      "VCS": {
-        "git": {},
-      },
-      "Jira": {},
-      "Slack": {}
-    },
     "Cybersecurity": {
       "CompTIA Network": {}
     },
-    "DevOps": {
-      "Jenkins": {
-        "Scripted Pipeline": {}
-      },
-      "GitLab": {}
-    },
-    "Data Science": {},
     "3D Modeling": {
       "Unity": {},
       "Blender": {},
